@@ -10,8 +10,8 @@ import NumResults from "./NumResults";
 import NavBar from "./NavBar";
 import Main from "./Main";
 import MovieDetails from "./MovieDetails";
-import { useMovies } from "./useMovies";
-import { useLocalStorageState } from "./useLocalStorageState";
+// import { useMovies } from "./useMovies";
+// import { useLocalStorageState } from "./useLocalStorageState";
 
 export default function App() {
   const [query, setQuery] = useState("rush hour");
