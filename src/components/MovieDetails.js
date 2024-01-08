@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import StarRating from "./StarRating";
 import Loader from "./Loader";
-import { useKey } from "./useKey";
+// import { useKey } from "./useKey";
 
 const OMDB_API_KEY = "9207dba";
 

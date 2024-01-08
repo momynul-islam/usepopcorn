@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 
-// Using OMDB public API
-const OMDB_API_KEY = "9207dba";
-
 export function useMovies(query) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +16,7 @@ export function useMovies(query) {
           setError("");
 
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${query}`,
+            `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${query}`,
             { signal: controller.signal }
           );
 
