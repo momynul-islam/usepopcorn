@@ -13,6 +13,8 @@ import MovieDetails from "./MovieDetails";
 // import { useMovies } from "./useMovies";
 // import { useLocalStorageState } from "./useLocalStorageState";
 
+const OMDB_API_KEY = "9207dba";
+
 export default function App() {
   const [query, setQuery] = useState("rush hour");
   const [movies, setMovies] = useState([]);
@@ -62,7 +64,7 @@ export default function App() {
           setError("");
 
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${query}`,
+            `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${query}`,
             { signal: controller.signal }
           );
 
