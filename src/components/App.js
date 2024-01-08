@@ -64,7 +64,7 @@ export default function App() {
           setError("");
 
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${query}`,
             { signal: controller.signal }
           );
 
